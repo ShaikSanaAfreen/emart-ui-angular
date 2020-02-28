@@ -1,0 +1,77 @@
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary card-width" data-toggle="collapse" data-target="#demo2 ">
+    <div class="row bg-primary text-white" >
+    <div class="col-3"> {{buyerId}} </div>
+    <div class="col-5"> {{todayDate}}</div>
+    <div class="col-4"> Rs.{{amount}}</div>
+    </div>
+    </button>
+    <div id="demo2" class="collapse">
+
+        <div classs="container">
+            <div class="row mt-5">
+                <div class="col">
+                    <h3>Bill Details</h3>
+                </div>
+        
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    
+        Contact Us:{{buyerContact}}
+        
+                </div>
+                <div class="col-6">
+                    
+                    Date:{{todayDate}}
+               
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                       
+                        Buyer Name:{{buyerName}}
+                   
+                </div>
+                    <div class="col-6">
+                        
+                        BuyerId:{{buyerId}}
+                   
+                </div>
+                </div>
+
+        <div class="row">
+            <div class="table-responsive m-2">
+        <table class="table table-striped ">
+            <thead class="thead-dark">
+                <tr>       
+            <th>Id</th>
+    <th>Particulars</th>
+    <th>Quantity</th>
+    <th>Rate</th>
+    <th>Amount</th>
+    </tr>
+    </thead>
+   <tbody>
+    
+    <tr *ngFor="let item of  cartItems">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>1</td>
+    <td>Rs. {{item.price}}</td>
+    <td>Rs. {{item.price}}</td>
+    
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><h5>Amount:</h5></td>
+        <td>Rs.{{amount}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+</div>

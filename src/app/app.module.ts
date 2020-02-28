@@ -1,0 +1,35 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ItemListComponent } from './emart/item/item-list/item-list.component';
+import { ItemDisplayComponent } from './emart/item/item-display/item-display.component';
+import { CartListComponent } from './emart/cart/cart-list/cart-list.component';
+import { BillViewComponent } from './emart/bill/bill-view/bill-view.component';
+import { BillListComponent } from './emart/bill/bill-list/bill-list.component';
+import { LoginComponent } from './emart/Signup/login/login.component';
+import { BuyerSignupComponent } from './emart/Signup/buyer-signup/buyer-signup.component';
+import { SellerSignupComponent } from './emart/Signup/seller-signup/seller-signup.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ItemListComponent,
+    ItemDisplayComponent,
+    CartListComponent,
+    BillViewComponent,
+    BillListComponent,
+    LoginComponent,
+    BuyerSignupComponent,
+    SellerSignupComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

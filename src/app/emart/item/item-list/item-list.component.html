@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3"  *ngFor="let item of allItems">
+    <div class="card card-width mx-3 my-3" >   
+    <img class="card-img-top img-size"
+    [src]="item.image"
+    [alt]="item.name" height="200" width="200"/>
+    <div class="card-body">
+    <div class="row">
+    <div class="col-6">
+    <h5 class="text-left">Name : {{item.name}}</h5>
+    </div>
+    <div class="col-6">
+    <p class="small text-left"> Price: {{item.price}}</p>
+    </div>
+    </div>
+    
+</div>
+    <div class="row">
+    <div class="col-12">
+    <button class="btn btn-primary" type="button" (click)="displayItemDetails(item.id)">
+    <i class="material-icons align-middle">view_list</i>
+    <span class="align-middle">View Details</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
